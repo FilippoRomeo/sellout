@@ -46,8 +46,7 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="" id="home">
                             <h1 style="padding: 10px 10px;" id="selcatmsg"></h1>
-                            <form class="form-horizontal" enctype="multipart/form-data" method="POST" 
-                            style="padding-left: 20px;" action="{{ url('/addPost')}}">
+                            <form class="form-horizontal" enctype="multipart/form-data" method="POST" style="padding-left: 20px;" action="{{ url('/addPost')}}">
                                 {{csrf_field()}}
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -58,9 +57,9 @@
                                                 <select class="form-control" name="subCategoryId">
                                                     <option value="">Select</option>
                                                     @if(count($subCategoriesController)>0)
-                                                        @foreach($subCategoriesController as $subcategory))
-                                                            <option value="{{$subcategory->id}}">{{$subcategory->subCategory}}</option>
-                                                        @endforeach
+                                                    @foreach($subCategoriesController as $subcategory))
+                                                    <option value="{{$subcategory->id}}">{{$subcategory->subCategory}}</option>
+                                                    @endforeach
                                                     @else
                                                     @endif
                                                 </select>
@@ -78,7 +77,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Post Name</b></label>
-                                                <input class="form-control" type="text" name="productName" placeholder="Post Name" require/>
+                                                <input class="form-control" type="text" name="productName" placeholder="Post Name" require />
                                                 @error('productName')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -96,7 +95,7 @@
                                                 <label>
                                                     <b>Year of Purchase</b>
                                                 </label>
-                                                <input class="form-control" type="number" name="purchaseYear" placeholder="Year of Purchase" require/>
+                                                <input class="form-control" type="number" name="purchaseYear" placeholder="Year of Purchase" require />
                                                 @error('purchaseYear')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -112,7 +111,7 @@
                                                 <label>
                                                     <b>Expected Selling Price</b>
                                                 </label>
-                                                <input class="form-control" type="number" name="expSellPrice" placeholder="Expected Selling Price"  require/>
+                                                <input class="form-control" type="number" name="expSellPrice" placeholder="Expected Selling Price" require />
                                                 @error('expSellPrice')
                                                 <div class="error alert alert-danger">
                                                     {{ "The price field is required." }}
@@ -128,7 +127,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your Name</b></label>
-                                                <input class="form-control" type="text" name="name" placeholder="Your Name" require/>
+                                                <input class="form-control" type="text" name="name" placeholder="Your Name" require />
                                                 @error('name')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -142,7 +141,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your mobile</b></label>
-                                                <input class="form-control" type="number" name="mobile" placeholder="Your mobile" require/>
+                                                <input class="form-control" type="number" name="mobile" placeholder="Your mobile" require />
                                                 @error('mobile')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -158,7 +157,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your Email</b></label>
-                                                <input class="form-control" type="text" name="email" placeholder="Your Email" require/>
+                                                <input class="form-control" type="text" name="email" placeholder="Your Email" require />
                                                 @error('email')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -198,7 +197,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>City</b></label>
-                                                <input class="form-control" type="text" name="city" placeholder="City" require/>
+                                                <input class="form-control" type="text" name="city" placeholder="City" require />
                                                 @error('city')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
