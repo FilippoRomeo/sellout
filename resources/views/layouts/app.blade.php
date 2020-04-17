@@ -172,7 +172,7 @@
         });
 
         $(document).ready(function() {
-            if (window.location == "{{route('')}}") {
+            if (window.location == "https://b00331418.herokuapp.com") {
                 $.ajax({
                     url: "{{route('categories.ads')}}",
                     method: "GET",
