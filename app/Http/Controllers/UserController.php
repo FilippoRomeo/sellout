@@ -214,36 +214,15 @@ class UserController extends Controller
 
     public function getAds()
     {
-        $ads = DB::table("advertisement_models")->get();
-        $output = '';
-        if (count($ads) == 0) {
-            $output .= '<p>Not Found</p>';
-            echo $output;
-        } else {
-            foreach ($ads as $row) {
-                $output .= '
-                <div class="col-md-3" style="margin:0rem;">
-                    <div class="card" style="text-align:center; margin:1rem width: 20rem;">
-                        <img src=' . strtok($row->photos, ',') . ' style="  width: 100%; height: 180px;"/>
-                        <div class="card-header" style="border:1px solid #ccc !important;">
-                            <h4 class="card-title"><b>' . $row->productName . '</b></h4>
-                        </div>
-                        <div class="card-body" style="border:1px solid #ccc !important;"> 
-                            <p class="card-text"><b>£' . $row->expSellPrice . '</b></p>
-                            <p class="card-text"><b>' . $row->city . '</b></p>
-                            <div class="card border-secondary" style="max-width: 10rem; border:1px solid #ccc !important; margin:auto; padding:0.4rem;">
-                                <a class="card-link" href=' . $_SERVER['HTTP_REFERER'] . 'product/view/' . $row->id . '>
-                                    <b>View</b>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>';
-            };
-
-            $output .= '';
-            echo $output;
-        }
+        $categories = DB::table('main_category_models')
+            ->select('main_category_models.id', 'main_category_models.mainCategory', 'icons_models.icons')
+            ->join('icons_models', 'icons_models.id', '=', 'main_category_models.id')
+            ->get();
+        $product = DB::table('advertisement_models')
+            ->select('*')
+            ->where(['advertisement_models.user_id' => Auth::id()])
+            ->get();
+        return view("users.user", ['categories' => $categories, 'product' => $product]);
     }
 
     public function viewAds(Request $request, $mainCategory, $id)
