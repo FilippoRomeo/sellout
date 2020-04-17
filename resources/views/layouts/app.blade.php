@@ -172,7 +172,7 @@
         });
 
         $(document).ready(function() {
-            if (window.location == "{{env('APP_URL')}}") {
+            if (window.location.pathname === "/") {
                 $.ajax({
                     url: "{{route('categories.ads')}}",
                     method: "GET",
