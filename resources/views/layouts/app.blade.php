@@ -36,10 +36,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                            <!-- Left Side Of Navbar -->
-                            <ul class="navbar-nav mr-auto col-md-2">
-                            </ul>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">                            
                             <!-- Right Side Of Navbar -->
                             <ul class="navbar-nav ml-2">
                                 <!-- Authentication Links -->

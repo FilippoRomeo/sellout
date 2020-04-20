@@ -152,7 +152,7 @@
                 @else
                 <div class="row">
                     <div class="col-lg-6">
-                        <p style="margin: 5% !important">Not found</p>
+                        <p style="margin: 5% !important">The items that you selected is not found, or you might don't have permission.</p>
                     </div>
                 </div>
                 @endif

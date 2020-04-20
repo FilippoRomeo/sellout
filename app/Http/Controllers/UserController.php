@@ -122,7 +122,7 @@ class UserController extends Controller
                 ->get();
             //get state content
             $statesController = StatesModel::all();
-            return view('users.publishPost.electronicsAppliancesAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
+            return view('users.publishPost.ElectronicsAppliancesAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
         } elseif ($id == 5) {
             $categories = DB::table('main_category_models')
                 ->select('main_category_models.id', 'main_category_models.mainCategory', 'icons_models.icons')
@@ -136,7 +136,7 @@ class UserController extends Controller
                 ->get();
             //get state content
             $statesController = StatesModel::all();
-            return view('users.publishPost.realEstateAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
+            return view('users.publishPost.RealEstateAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
         } elseif ($id == 6) {
             $categories = DB::table('main_category_models')
                 ->select('main_category_models.id', 'main_category_models.mainCategory', 'icons_models.icons')
@@ -150,7 +150,7 @@ class UserController extends Controller
                 ->get();
             //get state content
             $statesController = StatesModel::all();
-            return view('users.publishPost.servicesAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
+            return view('users.publishPost.ServicesAd', ['categories' => $categories, 'subCategoriesController' => $subCategoriesController, 'statesController' => $statesController]);
         };
     }
 
