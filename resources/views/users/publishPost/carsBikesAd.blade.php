@@ -54,7 +54,7 @@
                                             <div class="form-group">
                                                 <input type="hidden" name="mainCategoryId" value="{{Request::segment(3)}}" />
                                                 <label><b>Select Subcategory</b></label>
-                                                <select class="form-control" name="subCategoryId">
+                                                <select class="form-control" name="subCategoryId" required>
                                                     <option value="">Select</option>
                                                     @if(count($subCategoriesController)>0)
                                                     @foreach($subCategoriesController as $subcategory))
@@ -77,7 +77,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Post Name</b></label>
-                                                <input class="form-control" type="text" name="productName" placeholder="Post Name" require />
+                                                <input class="form-control" type="text" name="productName" placeholder="Post Name" required />
                                                 @error('productName')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -95,7 +95,7 @@
                                                 <label>
                                                     <b>Year of Purchase</b>
                                                 </label>
-                                                <input class="form-control" type="number" name="purchaseYear" placeholder="Year of Purchase" require />
+                                                <input class="form-control" type="number" name="purchaseYear" placeholder="Year of Purchase" required />
                                                 @error('purchaseYear')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -111,7 +111,7 @@
                                                 <label>
                                                     <b>Expected Selling Price</b>
                                                 </label>
-                                                <input class="form-control" type="number" name="expSellPrice" placeholder="Expected Selling Price" require />
+                                                <input class="form-control" type="number" name="expSellPrice" placeholder="Expected Selling Price" required />
                                                 @error('expSellPrice')
                                                 <div class="error alert alert-danger">
                                                     {{ "The price field is required." }}
@@ -127,7 +127,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your Name</b></label>
-                                                <input class="form-control" type="text" name="name" placeholder="Your Name" require />
+                                                <input class="form-control" type="text" name="name" placeholder="Your Name" required />
                                                 @error('name')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -141,7 +141,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your mobile</b></label>
-                                                <input class="form-control" type="number" name="mobile" placeholder="Your mobile" require />
+                                                <input class="form-control" type="number" name="mobile" placeholder="Your mobile" required />
                                                 @error('mobile')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -157,7 +157,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Your Email</b></label>
-                                                <input class="form-control" type="text" name="email" placeholder="Your Email" require />
+                                                <input class="form-control" type="text" name="email" placeholder="Your Email" required />
                                                 @error('email')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -172,7 +172,7 @@
                                             <div class="form-group">
                                                 <input type="hidden" name="state" value="{{Request::segment(3)}}">
                                                 <label><b>Area or council</b></label>
-                                                <select class="form-control" name="state" require>
+                                                <select class="form-control" name="state" required>
                                                     <option value="">Select</option>
                                                     @if(count($statesController)>0)
                                                     @foreach($statesController as $state))
@@ -197,7 +197,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>City</b></label>
-                                                <input class="form-control" type="text" name="city" placeholder="City" require />
+                                                <input class="form-control" type="text" name="city" placeholder="City" required />
                                                 @error('city')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -211,7 +211,7 @@
                                         <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label><b>Photos of your vehicle, select up to four pictures</b></label>
-                                                <input class="form-control" type="file" name="photos[]" multiple="true" />
+                                                <input class="form-control" type="file" name="photos[]" multiple="true" required />
                                                 @error('photos')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
@@ -229,7 +229,7 @@
                                                 <label>
                                                     <b>Description</b>
                                                 </label>
-                                                <textarea class="form-control" type="text" name="description" placeholder="Description" rows="4" cols="50" require></textarea>
+                                                <textarea class="form-control" type="text" name="description" placeholder="Description" rows="4" cols="50" required></textarea>
                                                 @error('description')
                                                 <div class="error alert alert-danger">
                                                     {{ $message }}
